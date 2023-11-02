@@ -17,11 +17,13 @@ function Login({ setIsLoggedIn }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if(formData.username && formData.password){
+      setIsLoggedIn(true);
+      history.push("/");
+    }
 
-    setIsLoggedIn(true);
 
     // after logging the user in, redirect to the home page!
-    history.push("/");
   }
 
   return (
