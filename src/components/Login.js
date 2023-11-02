@@ -19,12 +19,16 @@ function Login({ setIsLoggedIn }) {
     e.preventDefault();
     if(formData.username && formData.password){
       setIsLoggedIn(true);
+
+      // after logging the user in, redirect to the home page!
       history.push("/");
     }
 
 
-    // after logging the user in, redirect to the home page!
+    
   }
+
+
 
   return (
     <form onSubmit={handleSubmit}>
